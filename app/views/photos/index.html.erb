@@ -1,0 +1,28 @@
+<h1>Listing photos</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image url</th>
+  </tr>
+
+<% for photo in @photos %>
+  <tr>
+    <td><%=h photo.title %></td>
+    <td><%=h photo.description %></td>
+    <td><%=h photo.image_url %></td>
+    <td><%=h photo.image_dir %></td>
+    <td><%= link_to 'Show', photo %></td>
+    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+    <td>
+	    <a href="<%="http://soulflyer.co.uk/Photos/Images/" + photo.image_dir + "/" + photo.image_url %>"> <%= image_tag("http://soulflyer.co.uk/Photos/Images/" + photo.image_dir + "/Thumbs/" + photo.image_url, :alt => photo.description)  %></a>
+	  </td>
+    <td><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New photo', new_photo_path %>

@@ -1,0 +1,24 @@
+<h1>Batch Load New Photos</h1>
+<h2><%= @folder_path %></h2>
+<p>Upload a folder of files to the public/images directory and enter the folder name here.</p>
+<% form_tag(:action => :new_batch, :method => :post) do %>
+	<%= text_field_tag(:photo_dir, params[:photo_dir]) %> 
+  <ul>
+  	<%for folder in @dir_listing %>
+			<li>
+			<%= link_to folder, :method => :post, :action => "new_batch", :photo_dir => folder%>
+		  </li>
+    <%end %>
+  </ul>	
+<% end %>
+<h2>Files:</h2>
+<ul>
+	<p>listing is:</p>
+<%for file in @listing %>
+<li>
+	<%= file %>
+</li>
+<%end %>
+<% form_tag(:action => :create_batch, :method => :post, :listing => @listing, :photo_dir => params[:photo_dir]) do %>
+  <%= submit_tag( "Create DB Entries" ) %>
+<% end %>
