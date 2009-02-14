@@ -13,6 +13,6 @@
   <%=h @photo.image_dir + "/" + @photo.image_url %>
 </p>
 
-<a href="<%="http://soulflyer.co.uk/Photos/Images/" + @photo.image_dir + "/" + @photo.image_url %>"> <%= image_tag("http://soulflyer.co.uk/Photos/Images/" + @photo.image_dir + "/Thumbs/" + @photo.image_url, :alt => @photo.description)  %></a>
+<a href="<%="/images/photos/" + @photo.image_dir + "/" + @photo.image_url %>"> <%= image_tag("/images/photos/" + @photo.image_dir + "/thumbs/" + @photo.image_url, :alt => @photo.description)  %></a>
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

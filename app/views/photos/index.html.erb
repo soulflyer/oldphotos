@@ -16,7 +16,7 @@
     <td><%= link_to 'Show', photo %></td>
     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
     <td>
-	    <a href="<%="http://soulflyer.co.uk/Photos/Images/" + photo.image_dir + "/" + photo.image_url %>"> <%= image_tag("http://soulflyer.co.uk/Photos/Images/" + photo.image_dir + "/Thumbs/" + photo.image_url, :alt => photo.description)  %></a>
+	    <a href="<%="/images/photos/" + photo.image_dir + "/" + photo.image_url %>"> <%= image_tag("/images/photos/" + photo.image_dir + "/thumbs/" + photo.image_url, :alt => photo.description)  %></a>
 	  </td>
     <td><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

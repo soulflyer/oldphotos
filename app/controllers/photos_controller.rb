@@ -75,7 +75,7 @@ class PhotosController < ApplicationController
     print :listing
     for file in params[:listing]
       logger.info( "hello ************************************ #{params[:photo_dir]} image_url #{file}")
-      photo = Photo.new(:image_dir => params[:photo_dir], :image_url => file, :title => "test")
+      photo = Photo.new(:image_dir => params[:photo_dir], :image_url => file, :title => "test ")
       if photo.save
         logger.info("Photo saved")
       else
