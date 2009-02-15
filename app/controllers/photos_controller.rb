@@ -34,11 +34,11 @@ class PhotosController < ApplicationController
 
   def new_batch
     flash[:notice]= ''
-    @folder_path = RAILS_ROOT + "/public/images/"
+    @folder_path = RAILS_ROOT + "/public/images/photos/"
     
     Dir.chdir(@folder_path)
     @dir_listing = Dir["*"]
-    @listing = 'empty'
+    @listing = @dir_listing
     if params[:photo_dir]
       Dir.chdir(@folder_path + params[:photo_dir])
     end

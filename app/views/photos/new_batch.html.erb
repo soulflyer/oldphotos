@@ -12,13 +12,14 @@
   </ul>	
 <% end %>
 <h2>Files:</h2>
-<ul>
-	<p>listing is:</p>
-<%for file in @listing %>
-<li>
-	<%= file %>
-</li>
-<%end %>
 <% form_tag(:action => :create_batch, :method => :post, :listing => @listing, :photo_dir => params[:photo_dir]) do %>
   <%= submit_tag( "Create DB Entries" ) %>
 <% end %>
+<p>listing is:</p>	
+<ul>
+  <%for file in @listing %>
+	<li>
+		<%= file %>
+	</li>
+	<%end %>
+</ul>
