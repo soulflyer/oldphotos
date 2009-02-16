@@ -1,0 +1,140 @@
+/* @override http://localhost:3000/stylesheets/photos.css?1234750190 */
+
+/* @override http://localhost:3000/stylesheets/photos.css?1234748637 */
+
+body { background-color: #d34dd9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { 
+  color: #000;
+  text-decoration: none;
+}
+a:visited { 
+  bordercolor: #666;
+  text-decoration: none; 
+}
+a:hover { 
+  color: #fff; 
+  background-color:#000;
+  text-decoration: none;
+}
+
+div.row {
+  clear: both;
+  background-color: #b4cdb0;
+  padding: 0;
+  margin: 0;
+  height: 120px;
+}
+
+div.links {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+  width: 50px;
+  margin-left: 8px;
+}
+
+div.links p {
+  margin: 0;
+  padding: 0;
+}
+
+div.pic {
+  float: right;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+div.pic img{
+  height: 120px;
+}
+
+div.description {
+  margin-left: auto;
+  margin-right: auto;
+}
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#header {
+  background-color: #f5ff9a;
+  height: 60px;
+  padding: 10px 0 0 10px;
+  margin: 0;
+}
+
+#header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  background-color: #bbd5b2;
+  margin: 0;
+  padding: 8px 0 8px 12px;
+}
+#main h1 {
+  margin: 0 0 10px;
+  padding: 0;
+}
+#footer {
+  background-color: #f5ff9a;
+  height: 20px;
+  margin: 0;
+  padding: 10px 0 0 10px;
+}
+
+#footer p {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}

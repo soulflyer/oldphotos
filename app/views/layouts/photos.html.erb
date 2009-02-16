@@ -5,13 +5,20 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Photos: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'photos' %>
 </head>
 <body>
-
+<div id="header">
+	<h1>Soulflyer</h1>
+</div>
+<div id="main">
 <p style="color: green"><%= flash[:notice] %></p>
 
 <%= yield  %>
 
+</div>
+<div id="footer">
+	<p>WebDesign by</p>
+</div>
 </body>
 </html>

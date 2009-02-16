@@ -1,3 +1,3 @@
 class Photo < ActiveRecord::Base
-  validates_presence_of :title, :image_url, :image_dir
+  validates_presence_of :image_url, :image_dir
 end
