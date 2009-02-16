@@ -1,17 +1,19 @@
-/* @override http://localhost:3000/stylesheets/photos.css?1234750190 */
+/* @override http://localhost:3000/stylesheets/photos.css?1234790930 */
 
-/* @override http://localhost:3000/stylesheets/photos.css?1234748637 */
+/* @override http://localhost:3000/stylesheets/photos.css?1234789872 */
 
-body { background-color: #d34dd9;
+body { background-color: #000;
   color: #333;
-  margin: 0;
   padding: 0;
+  margin: 16px 20px 0;
 }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 pre {
@@ -37,9 +39,9 @@ a:hover {
 div.row {
   clear: both;
   background-color: #b4cdb0;
-  padding: 0;
-  margin: 0;
+  margin: 0 0 10px;
   height: 120px;
+  padding: 0 40px 0 0;
 }
 
 div.links {
@@ -106,15 +108,17 @@ div.description {
 }
 
 #header {
-  background-color: #f5ff9a;
+  background-color: #2d6a39;
   height: 60px;
   padding: 10px 0 0 10px;
   margin: 0;
+  color: #bbd5b2;
 }
 
 #header h1 {
-  margin: 0;
   padding: 0;
+  font-size: 48px;
+  margin: 14px 0 0;
 }
 
 #main {
@@ -127,14 +131,15 @@ div.description {
   padding: 0;
 }
 #footer {
-  background-color: #f5ff9a;
+  background-color: #2d6a39;
   height: 20px;
   margin: 0;
-  padding: 10px 0 0 10px;
+  padding: 4px 6px 4px 10px;
 }
 
 #footer p {
   margin: 0;
   padding: 0;
   text-align: right;
+  color: #bbd5b2;
 }

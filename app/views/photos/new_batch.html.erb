@@ -12,14 +12,21 @@
   </ul>	
 <% end %>
 <h2>Files:</h2>
-<% form_tag(:action => :create_batch, :method => :post, :listing => @listing, :photo_dir => params[:photo_dir]) do %>
+<% form_tag(:action => :create_batch, :method => :post, :listing => @listing, :photo_dir => params[:photo_dir] ) do %>
   <%= submit_tag( "Create DB Entries" ) %>
+	<p>Photos in this directory:</p>	
+	<ul>
+	  <%for file in @listing %>
+		<li>
+			<div class="row">
+			  <div class="pic">
+			    <%= image_tag("/images/photos/" +  params[:photo_dir] + "/thumbs/" + file , :alt =>  params[:photo_dir] + "/" + file )  %>
+			  </div>
+			  <div class="description">
+			  	<%= text_field_tag file, nil, :size => '40' %>
+			  </div>
+      </div>
+		</li>
+		<%end %>
+	</ul>
 <% end %>
-<p>listing is:</p>	
-<ul>
-  <%for file in @listing %>
-	<li>
-		<%= file %>
-	</li>
-	<%end %>
-</ul>
