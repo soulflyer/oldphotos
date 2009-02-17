@@ -1,3 +1,5 @@
+/* @override http://localhost:3000/stylesheets/photos.css?1234857300 */
+
 /* @override http://localhost:3000/stylesheets/photos.css?1234855222 */
 
 /* @override http://localhost:3000/stylesheets/photos.css?1234814843 */
@@ -80,33 +82,36 @@ a:hover {
   padding: 10px 0 0 10px;
   margin: 0;
   color: #bbd5b2;
-  height: 75px;
+  height: 78px;
+  -moz-box-sizing: border-box; 
 }
 
 #menu {
-  margin: 0;
-  padding: 0;
-  height: 30px;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 #menu ul{
-  margin: 14px 0 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #header #menu li {
   background-color: #305a37;
-  margin-top: 0;
-  margin-right: 0;
   display: inline-block;
   padding: 0 4px;
+  border-color: #436b46;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 #header a { 
   color: #bbd5b2;
+  padding: 0;
+  margin: 0;
 }
 
 #header a:visited { 
@@ -120,7 +125,7 @@ a:hover {
 #header h1 {
   padding: 0;
   font-size: 48px;
-  margin: 14px 0 0;
+  margin: 16px 0;
 }
 
 #main {
