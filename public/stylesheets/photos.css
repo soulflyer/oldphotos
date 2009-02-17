@@ -1,3 +1,5 @@
+/* @override http://localhost:3000/stylesheets/photos.css?1234855222 */
+
 /* @override http://localhost:3000/stylesheets/photos.css?1234814843 */
 
 /* @override http://localhost:3000/stylesheets/photos.css?1234812139 */
@@ -134,31 +136,12 @@ a:hover {
 
 div.row {
   background-color: #b4cdb0;
-  margin: 0 0 10px;
   padding: 0 1px 0 0;
   width: 380px;
   float: left;
   height: 120px;
   overflow: hidden;
-}
-
-div.row_odd {
-  background-color: #b4cdb0;
-  margin: 0 0 10px;
-  padding: 0 1px 0 0;
-  width: 380px;
-  float: left;
-  height: 120px;
-  overflow: hidden;
-}
-
-div.row_even {
-  background-color: #b4cdb0;
-  margin: 0 0 10px;
-  height: 120px;
-  padding: 0 1px 0 0;
-  width: 380px;
-  float: left;
+  margin: 0 16px 10px 0;
 }
 
 div.links {
@@ -178,15 +161,29 @@ div.pic {
   float: right;
   margin: 0 0 8px;
   padding: 0;
+  width: 180px;
 }
 
 div.pic img{
-  height: 120px;
+  float: right;
+  width: 180px;
 }
 
 div.description {
-  margin-left: auto;
-  margin-right: auto;
+  height: 120px;
+  float: right;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin: 0;
+  z-index: 1;
+  width: 200px;
+}
+
+div.description input {
+  width: 90%;
+  padding: 0;
+  margin: 5px 0 0 6px;
 }
 
 #footer {
