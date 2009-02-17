@@ -1,3 +1,5 @@
+/* @override http://localhost:3000/stylesheets/photos.css?1234814843 */
+
 /* @override http://localhost:3000/stylesheets/photos.css?1234812139 */
 
 body { background-color: #000;
@@ -83,6 +85,7 @@ a:hover {
   margin: 0;
   padding: 0;
   height: 30px;
+  overflow: hidden;
 }
 
 #menu ul{
@@ -128,12 +131,21 @@ a:hover {
   padding: 0;
 }
 
-div.row {
-  clear: both;
+div.row_odd {
   background-color: #b4cdb0;
   margin: 0 0 10px;
   height: 120px;
   padding: 0 1px 0 0;
+  width: 400px;
+  float: right;
+}
+
+div.row_even {
+  background-color: #b4cdb0;
+  margin: 0 0 10px;
+  height: 120px;
+  padding: 0 1px 0 0;
+  width: 400px;
 }
 
 div.links {
