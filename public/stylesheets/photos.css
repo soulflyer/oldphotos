@@ -125,6 +125,7 @@ a:hover {
   background-color: #bbd5b2;
   margin: 0;
   padding: 8px 12px;
+  overflow: hidden;
 }
 #main h1 {
   margin: 0 0 10px;
@@ -134,10 +135,11 @@ a:hover {
 div.row_odd {
   background-color: #b4cdb0;
   margin: 0 0 10px;
-  height: 120px;
   padding: 0 1px 0 0;
-  width: 400px;
-  float: right;
+  width: 380px;
+  float: left;
+  height: 120px;
+  overflow: hidden;
 }
 
 div.row_even {
@@ -145,7 +147,8 @@ div.row_even {
   margin: 0 0 10px;
   height: 120px;
   padding: 0 1px 0 0;
-  width: 400px;
+  width: 380px;
+  float: left;
 }
 
 div.links {
@@ -181,6 +184,7 @@ div.description {
   height: 20px;
   margin: 0;
   padding: 4px 6px 4px 10px;
+  bottom: 0;
 }
 
 #footer p {
