@@ -1,6 +1,6 @@
 <h1>Listing photos</h1>
 <% for photo in @photos %>
-  <div class = "<%= cycle('row_odd', 'row_even')%>"
+  <div class = "row"
   	<div class="links">
   		<p><%= link_to 'Show', photo %></p>
 	    <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
