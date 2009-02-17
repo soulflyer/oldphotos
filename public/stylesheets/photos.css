@@ -1,6 +1,4 @@
-/* @override http://localhost:3000/stylesheets/photos.css?1234790930 */
-
-/* @override http://localhost:3000/stylesheets/photos.css?1234789872 */
+/* @override http://localhost:3000/stylesheets/photos.css?1234812139 */
 
 body { background-color: #000;
   color: #333;
@@ -26,50 +24,16 @@ a {
   color: #000;
   text-decoration: none;
 }
+
 a:visited { 
   bordercolor: #666;
   text-decoration: none; 
 }
+
 a:hover { 
   color: #fff; 
   background-color:#000;
   text-decoration: none;
-}
-
-div.row {
-  clear: both;
-  background-color: #b4cdb0;
-  margin: 0 0 10px;
-  height: 120px;
-  padding: 0 40px 0 0;
-}
-
-div.links {
-  float: right;
-  text-align: right;
-  margin-right: 8px;
-  width: 50px;
-  margin-left: 8px;
-}
-
-div.links p {
-  margin: 0;
-  padding: 0;
-}
-
-div.pic {
-  float: right;
-  margin: 0 0 8px;
-  padding: 0;
-}
-
-div.pic img{
-  height: 120px;
-}
-
-div.description {
-  margin-left: auto;
-  margin-right: auto;
 }
 .fieldWithErrors {
   padding: 2px;
@@ -109,9 +73,42 @@ div.description {
 
 #header {
   background-color: #2d6a39;
-  height: 60px;
   padding: 10px 0 0 10px;
   margin: 0;
+  color: #bbd5b2;
+  height: 75px;
+}
+
+#menu {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+}
+
+#menu ul{
+  margin: 14px 0 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+#header #menu li {
+  background-color: #305a37;
+  margin-top: 0;
+  margin-right: 0;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+#header a { 
+  color: #bbd5b2;
+}
+
+#header a:visited { 
+  color: #bbd5b2;
+}
+
+#header a:hover { 
   color: #bbd5b2;
 }
 
@@ -124,12 +121,49 @@ div.description {
 #main {
   background-color: #bbd5b2;
   margin: 0;
-  padding: 8px 0 8px 12px;
+  padding: 8px 12px;
 }
 #main h1 {
   margin: 0 0 10px;
   padding: 0;
 }
+
+div.row {
+  clear: both;
+  background-color: #b4cdb0;
+  margin: 0 0 10px;
+  height: 120px;
+  padding: 0 1px 0 0;
+}
+
+div.links {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+  width: 50px;
+  margin-left: 8px;
+}
+
+div.links p {
+  margin: 0;
+  padding: 0;
+}
+
+div.pic {
+  float: right;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+div.pic img{
+  height: 120px;
+}
+
+div.description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #footer {
   background-color: #2d6a39;
   height: 20px;

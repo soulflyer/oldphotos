@@ -1,17 +1,13 @@
 <h1>Listing photos</h1>
-<div links>
-  <%= link_to 'New photo', new_photo_path %>
-  <%= link_to 'New Batch', new_batch_photos_path %>
-</div>
 <% for photo in @photos %>
-  <div class="row">
+  <div class = "<%= cycle('row_odd', 'row_even')%>"
   	<div class="links">
   		<p><%= link_to 'Show', photo %></p>
 	    <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
 	    <p><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></p>
   	</div>
     <div class="pic">
-    	<a href="<%="/images/photos/" + photo.image_dir + "/" + photo.image_url %>"> <%= image_tag("/images/photos/" + photo.image_dir + "/thumbs/" + photo.image_url, :alt => photo.image_dir + "/" + photo.image_url + ":\t" + 'photo.description')  %></a>
+    	<a href="<%="/images/photos/" + photo.image_dir + "/" + photo.image_url %>"> <%= image_tag("/images/photos/" + photo.image_dir + "/thumbs/" + photo.image_url, :alt => photo.image_dir + "/" + photo.image_url)  %></a>
     </div>
     <div class="description">
     	<td><%=h photo.description %></td>
