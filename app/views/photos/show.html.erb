@@ -1,13 +1,13 @@
-<p>
-  <b>Description:</b>
-  <%=h @photo.description %>
-</p>
-
-<p>
-  <b>Image url:</b>
-  <%=h @photo.image_dir + "/" + @photo.image_url %>
-</p>
-
-<a href="<%="/images/photos/" + @photo.image_dir + "/" + @photo.image_url %>"> <%= image_tag("/images/photos/" + @photo.image_dir + "/thumbs/" + @photo.image_url, :alt => @photo.description)  %></a>
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photo_path %>
+<% @stylesheet = "show" %>
+<div class="large_image">
+  <%= image_tag( photo_root_directory + "/" + @photo.image_dir + "/" + @photo.image_url )%>
+</div>
+<% if session[:user_id] %>
+  <%= link_to 'Edit', edit_photo_path(@photo) %> 
+<% end %>
+<div class="image_info">
+	<p>
+	  <b>Description:</b>
+	  <%=h @photo.description %>
+  </p>
+</div>

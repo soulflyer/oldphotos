@@ -1,0 +1,22 @@
+/* @override http://localhost:3000/stylesheets/condelastic.css?1236883897 */
+#wrapper {
+  width: 99%;
+  overflow: hidden;
+  min-width: 474px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* star hacks. Only bad browsers are fooled (ie6 and down) */
+* html #wrapper {
+  overflow: visible;
+}
+
+
+/* compact IE min-max expression for 'conditional liquid' */
+
+* html body #wrapper {width:expression(
+(document.documentElement.offsetWidth) >1030 
+* (parseInt(document.body.currentStyle.fontSize) 
+/ parseInt(document.body.currentStyle.fontSize))?  "1000px" 
+: ((document.documentElement.offsetWidth) < 475? "474px" : "99%")); }

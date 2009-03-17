@@ -4,20 +4,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Photos: <%= controller.action_name %></title>
+  <title>Soulflyer Photos: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'photos' %>
+  <% if @stylesheet %>
+    <%= stylesheet_link_tag @stylesheet %>
+  <% end %>
 </head>
 <body>
 
 <div id="wrapper">
 	<div id="header">
-		<h1>Soulflyer</h1>
+		<h1>Soulflyer Photos</h1>
 		<div id="menu">
 	    <ul>
 		    <li><%= link_to 'Index', photos_path %></li>
+				<% if session[:user_id] %>
 				<li><%= link_to 'New photo', new_photo_path %></li>
 				<li><%= link_to 'New Batch', new_batch_photos_path %></li>
+				<% end %>
 	    </ul>	 
+		</div>
+		<div id="login">
+			<% if session[:user_id] %>
+			  <% user=User.find(session[:user_id]) %>
+			  <%= link_to "Logout #{user.name}", :controller => 'admin', :action => 'logout' %>
+			<% else %>
+			  <%= link_to "Login", :controller => 'admin', :action => 'login' %>
+			<% end %>
 		</div>
 	</div>
 	<div id="main">

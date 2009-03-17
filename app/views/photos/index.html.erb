@@ -1,16 +1,20 @@
+<% @stylesheet = "index" %>
 <h1>Listing photos</h1>
 <% for photo in @photos %>
   <div class = "row"
-  	<div class="links">
-  		<p><%= link_to 'Show', photo %></p>
-	    <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
-	    <p><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></p>
-  	</div>
+	  <% if session[:user_id] %>
+  	  <div class="links">
+		    <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
+		    <p><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></p>
+  	  </div>
+    <% end %>
     <div class="pic">
-    	<a href="<%="/images/photos/" + photo.image_dir + "/" + photo.image_url %>"> <%= image_tag("/images/photos/" + photo.image_dir + "/thumbs/" + photo.image_url, :alt => photo.image_dir + "/" + photo.image_url)  %></a>
+	    <%= link_to image_tag( photo_root_directory + "/" + photo.image_dir + "/thumbs/" + photo.image_url ), photo %>
     </div>
     <div class="description">
-    	<td><%=h photo.description %></td>
+    	<p><%=h photo.description %></p>
+      <p><%= EXIFR::JPEG.new( photo.image_url).date_time %></p>
+<p><%= (photo.exif).date_time %></p>
     </div>
   </div>
 
