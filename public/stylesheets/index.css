@@ -1,4 +1,4 @@
-/* @override http://localhost:3000/stylesheets/condelastic.css?1236883897 */
+/* @override http://localhost:3000/stylesheets/index.css?1237477064 */
 #wrapper {
   width: 99%;
   overflow: hidden;
@@ -20,3 +20,68 @@
 * (parseInt(document.body.currentStyle.fontSize) 
 / parseInt(document.body.currentStyle.fontSize))?  "1000px" 
 : ((document.documentElement.offsetWidth) < 475? "474px" : "99%")); }
+
+div.row {
+  background-color: #b4cdb0;
+  width: 380px;
+  float: left;
+  height: 120px;
+  overflow: hidden;
+  margin: 0 6px 10px;
+  padding: 0;
+}
+
+div.links {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+  width: 50px;
+  margin-left: 8px;
+}
+
+div.links p {
+  margin: 0;
+  padding: 0;
+}
+
+div.pic {
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  height: 120px;
+  overflow: hidden;
+}
+
+div.pic a {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+div.pic img{
+  float: right;
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+div.description {
+  height: 120px;
+  float: right;
+  padding: 0;
+  margin: 0 8px 0 0;
+  width: 170px;
+}
+
+div.description input {
+  width: 182px;
+  padding: 0;
+  margin: 5px 0 0 6px;
+}
+
+div.description ul {
+  margin: 0;
+  padding: 0;
+}
+

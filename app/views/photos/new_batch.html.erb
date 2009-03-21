@@ -18,7 +18,9 @@
 	  <%for file in @listing %>
 			<div class="row">
 			  <div class="pic">
+				  <% if (params[:photo_dir]) %>
 			    <%= image_tag("/images/photos/" +  params[:photo_dir] + "/thumbs/" + file , :alt =>  params[:photo_dir] + "/" + file )  %>
+			    <% end %>
 			  </div>
 			  <div class="description">
 			  	<%= text_field_tag file, nil, :size => '40' %>

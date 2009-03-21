@@ -1,8 +1,4 @@
-/* @override http://localhost:3000/stylesheets/photos.css?1236925853 */
-
-/* @override http://localhost:3000/stylesheets/photos.css?1236885781 */
-
-/* @override http://localhost:3000/stylesheets/photos.css?1236879563 */
+/* @override http://localhost:3000/stylesheets/photos.css?1237286120 */
 
 body { background-color: #000;
   color: #333;
@@ -148,64 +144,6 @@ a:hover {
   padding: 0;
 }
 
-div.row {
-  background-color: #b4cdb0;
-  width: 380px;
-  float: left;
-  height: 120px;
-  overflow: hidden;
-  margin: 0 6px 10px;
-  padding: 0;
-}
-
-div.links {
-  float: right;
-  text-align: right;
-  margin-right: 8px;
-  width: 50px;
-  margin-left: 8px;
-}
-
-div.links p {
-  margin: 0;
-  padding: 0;
-}
-
-div.pic {
-  float: right;
-  margin: 0;
-  padding: 0;
-  width: 180px;
-}
-
-div.pic a {
-  margin: 0;
-  padding: 0;
-  border-style: none;
-}
-
-div.pic img{
-  float: right;
-  width: 180px;
-  margin: 0;
-  padding: 0;
-  border-style: none;
-}
-
-div.description {
-  height: 120px;
-  float: right;
-  padding: 0;
-  margin: 0 8px 0 0;
-  width: 190px;
-}
-
-div.description input {
-  width: 182px;
-  padding: 0;
-  margin: 5px 0 0 6px;
-}
-
 div.login_form {
   width: 260px;
 }
@@ -213,6 +151,7 @@ div.login_form {
 div.login_form div {
   text-align: right;
 }
+
 
 div.login_form div.submit_button {
   text-align: left;

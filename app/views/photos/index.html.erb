@@ -2,22 +2,29 @@
 <h1>Listing photos</h1>
 <% for photo in @photos %>
   <div class = "row"
-	  <% if session[:user_id] %>
-  	  <div class="links">
-		    <p><%= link_to 'Edit', edit_photo_path(photo) %></p>
-		    <p><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></p>
-  	  </div>
-    <% end %>
+
     <div class="pic">
 	    <%= link_to image_tag( photo_root_directory + "/" + photo.image_dir + "/thumbs/" + photo.image_url ), photo %>
     </div>
     <div class="description">
-    	<p><%=h photo.description %></p>
-      <p><%= EXIFR::JPEG.new( photo.image_url).date_time %></p>
-<p><%= (photo.exif).date_time %></p>
+		  <% if session[:user_id] %>
+	  	  <div class="links">
+		      <ul>
+				    <li><%= link_to 'Edit', edit_photo_path(photo) %></li>
+					  <li><%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %></li>
+				  </ul>
+	  	  </div>
+	    <% end %>
+			<ul>
+	    	<li><%=h photo.description %></li>
+				<li><%= photo.exifdate.strftime("%b %Y") %></li>
+				<li><%= photo.exif.aperture %></li>
+				<li><%= photo.exif.shutterspeed %></li>
+				<li><%= photo.exif.iso %></li>
+      </ul>
     </div>
   </div>
 
 <% end %>
-
+<%= will_paginate @photos %>
 
