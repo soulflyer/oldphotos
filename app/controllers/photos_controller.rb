@@ -60,6 +60,7 @@ class PhotosController < ApplicationController
   # POST /photos.xml
   def create
     @photo = Photo.new(params[:photo])
+    @photo.extract_exif
 
     respond_to do |format|
       if @photo.save
@@ -79,6 +80,8 @@ class PhotosController < ApplicationController
       logger.info( "hello ************************************ #{params[:photo_dir]} image_url #{file}")
       # create the photo entry. The decription field is passed here as a param with the name of the file
       photo = Photo.new(:image_dir => params[:photo_dir], :image_url => file, :description => params[file])
+      photo.extract_exif
+      
       if photo.save
         logger.info("Photo saved")
       else

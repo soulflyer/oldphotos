@@ -9,6 +9,17 @@ class Photo < ActiveRecord::Base
     @exif = MiniExiftool.new( RAILS_ROOT + "/public/images/photos/" + self.image_dir + "/" + self.image_url)
   end
   
+  # redo extract_exif
+  def extract_exif
+    if (self.exif)
+      self.iso = self.exif.iso
+      self.shutterspeed = self.exif.shutterspeed
+      self.aperture = self.exif.aperture
+      self.focallength = self.exif.focallength
+      self.date = self.exifdate
+    end
+  end
+  
   def exifdate
     if (self.exif.timedateoriginal)
       @exifdate = Time.parse self.exif.timedateoriginal.to_s

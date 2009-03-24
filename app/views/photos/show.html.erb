@@ -7,11 +7,11 @@
 <% end %>
 <div class="image_info">
 	<ul>
-	  <li><%= @photo.exifdate.strftime("%b %Y") %></li>	  
-	  <li>ISO: <%= @photo.exif.iso %></li>
-	  <li>Shutter: <%= @photo.exif.shutterspeed %></li>
-	  <li>Aperture: <%= @photo.exif.aperture %></li>
-	  <li>Focal Length: <%= @photo.exif.focallength %></li>
+	  <li><%= @photo.date.strftime("%b %Y") %></li>	  
+	  <li>ISO: <%= @photo.iso %></li>
+	  <li>Shutter: <%= @photo.shutterspeed %></li>
+	  <li>Aperture: <%= @photo.aperture %></li>
+	  <li>Focal Length: <%= @photo.focallength %></li>
   </ul>
   <p>Description: <%=h @photo.description %></p>
 </div>
