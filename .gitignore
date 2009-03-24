@@ -3,5 +3,5 @@ log/*.log
 tmp/**/*
 config/database.yml
 db/*.sqlite3
-public/images/photos/
+public/images/photos
 index.html
