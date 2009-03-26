@@ -1,55 +1,24 @@
-/* @override http://localhost:3000/stylesheets/index.css?1237477064 */
-#wrapper {
-  width: 99%;
-  overflow: hidden;
-  min-width: 474px;
-  margin-right: auto;
-  margin-left: auto;
+/* @override http://localhost:3000/stylesheets/index.css?1238048064 */
+
+#main {
+  padding: 0 10px;
 }
-
-/* star hacks. Only bad browsers are fooled (ie6 and down) */
-* html #wrapper {
-  overflow: visible;
-}
-
-
-/* compact IE min-max expression for 'conditional liquid' */
-
-* html body #wrapper {width:expression(
-(document.documentElement.offsetWidth) >1030 
-* (parseInt(document.body.currentStyle.fontSize) 
-/ parseInt(document.body.currentStyle.fontSize))?  "1000px" 
-: ((document.documentElement.offsetWidth) < 475? "474px" : "99%")); }
 
 div.row {
   background-color: #b4cdb0;
-  width: 380px;
+  width: 280px;
   float: left;
-  height: 120px;
   overflow: hidden;
+  padding: 0;
   margin: 0 6px 10px;
-  padding: 0;
-}
-
-div.links {
-  float: right;
-  text-align: right;
-  margin-right: 8px;
-  width: 50px;
-  margin-left: 8px;
-}
-
-div.links p {
-  margin: 0;
-  padding: 0;
 }
 
 div.pic {
   float: right;
   margin: 0;
   padding: 0;
-  width: 180px;
-  height: 120px;
+  width: 186px;
+  height: 126px;
   overflow: hidden;
 }
 
@@ -63,25 +32,66 @@ div.pic img{
   float: right;
   margin: 0;
   padding: 0;
-  border-style: none;
+  border: 2px solid #101d12;
 }
 
 div.description {
-  height: 120px;
-  float: right;
+  height: 124px;
   padding: 0;
-  margin: 0 8px 0 0;
-  width: 170px;
-}
-
-div.description input {
-  width: 182px;
-  padding: 0;
-  margin: 5px 0 0 6px;
+  margin: 0;
+  float: left;
+  width: 94px;
 }
 
 div.description ul {
   margin: 0;
   padding: 0;
+  clear: both;
 }
 
+div.links {
+  padding: 4px 0 0;
+  margin: 0;
+  float: left;
+  width: 270px;
+  background-color: #2d6a39;
+}
+
+div.links p {
+  margin: 0;
+  padding: 0;
+}
+
+div.links ul{
+  padding: 0;
+  margin: 0;
+}
+
+div.links li {
+  background-color: #305a37;
+  display: inline-block;
+  border-color: #436b46;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-size: small;
+  padding: 0 3px;
+}
+
+div.links a { 
+  color: #bbd5b2;
+  padding: 0;
+  margin: 0;
+}
+
+div.links a:visited { 
+}
+
+div.links a:hover { 
+  color: #9cffa0;
+}
+
+div.pagination {
+  float: left;
+}

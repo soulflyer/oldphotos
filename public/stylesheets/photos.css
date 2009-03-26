@@ -1,4 +1,4 @@
-/* @override http://localhost:3000/stylesheets/photos.css?1237286120 */
+/* @override http://localhost:3000/stylesheets/photos.css?1238047752 */
 
 body { background-color: #000;
   color: #333;
@@ -21,19 +21,9 @@ pre {
 }
 
 a { 
-  color: #000;
   text-decoration: none;
 }
 
-a:visited { 
-  bordercolor: #666;
-  text-decoration: none; 
-}
-
-a:hover { 
-  color: #fff; 
-  text-decoration: none;
-}
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
@@ -70,11 +60,31 @@ a:hover {
   list-style: square;
 }
 
-#header {
+#header, #footer {
   background-color: #2d6a39;
+  color: #bbd5b2;
+}
+
+#header a, #footer a {
+  color: #bbd5b2;
+  padding: 0;
+  margin: 0;
+
+}
+
+#header a:visited, #footer a:visited { 
+  color: #bbd5b2;
+  text-decoration: none;
+}
+
+#header a:hover, #footer a:hover { 
+  color: #9cffa0;
+  text-decoration: none;
+}
+
+#header {
   padding: 10px 0 0 10px;
   margin: 0;
-  color: #bbd5b2;
   height: 78px;
   -moz-box-sizing: border-box; 
 }
@@ -107,20 +117,6 @@ a:hover {
   margin: 0 8px 0 0;
   padding: 0;
   overflow: hidden;
-}
-
-#header a { 
-  color: #bbd5b2;
-  padding: 0;
-  margin: 0;
-}
-
-#header a:visited { 
-  color: #bbd5b2;
-}
-
-#header a:hover { 
-  color: #9cffa0;
 }
 
 #header h1 {
@@ -158,11 +154,11 @@ div.login_form div.submit_button {
 }
 
 #footer {
-  background-color: #2d6a39;
   height: 20px;
   margin: 0;
   padding: 4px 6px 4px 10px;
   bottom: 0;
+  color: #c7e3c3;
 }
 
 #footer p {
@@ -170,4 +166,8 @@ div.login_form div.submit_button {
   padding: 0;
   text-align: right;
   color: #bbd5b2;
+}
+
+#footer span.current {
+  text-decoration: underline;
 }

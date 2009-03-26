@@ -40,7 +40,10 @@
 
 	</div>
 	<div id="footer">
-		<p>WebDesign by</p>
+		<% if @photos %>
+		  <%= will_paginate @photos %>
+		<% end %>
+		<p>WebDesign by <%= link_to "RailsIain", "http://railsiain.com" %></p>
 	</div>
 </div>
 </body>

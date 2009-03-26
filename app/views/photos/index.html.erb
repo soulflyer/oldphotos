@@ -1,11 +1,6 @@
-<% @stylesheet = "index" %>
-<h1>Listing photos</h1>
+<% @stylesheet = "index" , "condelastic" %>
 <% for photo in @photos %>
   <div class = "row"
-
-    <div class="pic">
-	    <%= link_to image_tag( photo_root_directory + "/" + photo.image_dir + "/thumbs/" + photo.image_url ), photo %>
-    </div>
     <div class="description">
 		  <% if session[:user_id] %>
 	  	  <div class="links">
@@ -23,8 +18,8 @@
 				<li><%= photo.exif.iso %></li>
       </ul>
     </div>
+    <div class="pic">
+	    <%= link_to image_tag( photo_root_directory + "/" + photo.image_dir + "/thumbs/" + photo.image_url ), photo %>
+    </div>
   </div>
-
 <% end %>
-<%= will_paginate @photos %>
-
