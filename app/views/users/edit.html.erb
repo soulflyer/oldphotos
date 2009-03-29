@@ -1,23 +1,18 @@
-<h1>Editing user</h1>
+<h1>Preferences</h1>
 
 <% form_for(@user) do |f| %>
+<div>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
+  <div>
+    <%= f.label :name %>
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :hashed_password %><br />
-    <%= f.text_field :hashed_password %>
-  </p>
-  <p>
-    <%= f.label :salt %><br />
-    <%= f.text_field :salt %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+  </div>
+	<div>
+		<%= f.label :per_page %>
+		<%= f.text_field :per_page %>
+	</div>
+  <%= f.submit "Update" %>
+</div>
 <% end %>
 
 <%= link_to 'Show', @user %> |

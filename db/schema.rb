@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090227082709) do
+ActiveRecord::Schema.define(:version => 20090326183042) do
 
   create_table "photos", :force => true do |t|
     t.string   "title"
@@ -18,6 +18,11 @@ ActiveRecord::Schema.define(:version => 20090227082709) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_dir"
+    t.string   "iso"
+    t.string   "aperture"
+    t.string   "shutterspeed"
+    t.string   "focallength"
+    t.datetime "date"
   end
 
   create_table "sessions", :force => true do |t|
@@ -36,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20090227082709) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "per_page"
   end
 
 end

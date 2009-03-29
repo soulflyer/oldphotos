@@ -19,7 +19,8 @@ class Photo < ActiveRecord::Base
       self.date = self.exifdate
     end
   end
-  
+
+# this reads the date from the jpg file, not the database, so it should probably only get called to set photo.date  
   def exifdate
     if (self.exif.timedateoriginal)
       @exifdate = Time.parse self.exif.timedateoriginal.to_s

@@ -12,7 +12,7 @@
 	    <% end %>
 			<ul>
 	    	<li><%=h photo.description %></li>
-				<li><%= photo.exifdate.strftime("%b %Y") %></li>
+				<li><%= photo.date.strftime("%b %Y") %></li>
 				<li><%= photo.exif.aperture %></li>
 				<li><%= photo.exif.shutterspeed %></li>
 				<li><%= photo.exif.iso %></li>

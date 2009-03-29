@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users
+  map.resources :users, :member => {:preferences => :get}
+  # map.user_preferences "users/:id/preferences", :controller => :users, :id => /\d+/, :action => :preferences
+  # map.preferences "users/preferences/:id", :controller => :users, :id => /\d+/, :action => :preferences
 
   map.resources :photos, :collection => {:new_batch => :get}
 
@@ -43,5 +45,5 @@ ActionController::Routing::Routes.draw do |map|
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing the them or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+#  map.connect ':controller/:action/:id.:format'
 end

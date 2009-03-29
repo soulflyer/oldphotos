@@ -21,6 +21,7 @@
 				<% if session[:user_id] %>
 				<li><%= link_to 'New photo', new_photo_path %></li>
 				<li><%= link_to 'New Batch', new_batch_photos_path %></li>
+				<li><%= link_to 'Preferences', edit_user_path(:id => session[:user_id]) %></li>
 				<% end %>
 	    </ul>	 
 		</div>

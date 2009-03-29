@@ -3,8 +3,13 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.xml
   def index
+    if session[:user_id]
+      per_page=User.find(session[:user_id]).per_page
+    else
+      per_page=12
+    end
     # @photos = Photo.find(:all)
-    @photos = Photo.paginate :page => params[:page], :per_page => 12
+    @photos = Photo.paginate :page => params[:page], :per_page => per_page
 
     respond_to do |format|
       format.html # index.html.erb
@@ -36,6 +41,7 @@ class PhotosController < ApplicationController
 
   def new_batch
     flash[:notice]= ''
+    # need to get the path in the following line from the helper method somehow....
     @folder_path = RAILS_ROOT + "/public/images/photos/"
     
     Dir.chdir(@folder_path)
@@ -88,7 +94,7 @@ class PhotosController < ApplicationController
         logger.info("save failed")
       end
     end
-    redirect_to(:action => "new_batch")
+    redirect_to(:action => "index")
   end
   
   # PUT /photos/1

@@ -60,16 +60,17 @@ class UsersController < ApplicationController
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
-
-    respond_to do |format|
-      if @user.update_attributes(params[:user])
-        flash[:notice] = "User #{@user.name} was successfully updated."
-        format.html { redirect_to(:action=>'index') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @user.errors,
-                             :status => :unprocessable_entity }
+    if @user.id == session[:user_id]
+      respond_to do |format|
+        if @user.update_attributes(params[:user])
+          flash[:notice] = "User #{@user.name} was successfully updated."
+          format.html { redirect_to(:action=>'index') }
+          format.xml  { head :ok }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @user.errors,
+                               :status => :unprocessable_entity }
+        end
       end
     end
   end
@@ -83,6 +84,14 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(users_url) }
       format.xml  { head :ok }
+    end
+  end
+  def preferences
+    @user = User.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @user }
     end
   end
 end
