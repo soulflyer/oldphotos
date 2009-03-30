@@ -1,0 +1,173 @@
+/* @override http://localhost:3000/stylesheets/photos.css?1238047752 */
+
+body { background-color: #000;
+  color: #333;
+  padding: 0;
+  margin: 16px 20px 0;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { 
+  text-decoration: none;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#header, #footer {
+  background-color: #2d6a39;
+  color: #bbd5b2;
+}
+
+#header a, #footer a {
+  color: #bbd5b2;
+  padding: 0;
+  margin: 0;
+
+}
+
+#header a:visited, #footer a:visited { 
+  color: #bbd5b2;
+  text-decoration: none;
+}
+
+#header a:hover, #footer a:hover { 
+  color: #9cffa0;
+  text-decoration: none;
+}
+
+#header {
+  padding: 10px 0 0 10px;
+  margin: 0;
+  height: 78px;
+  -moz-box-sizing: border-box; 
+}
+
+#header #menu {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+#header #menu ul{
+  padding: 0;
+  margin: 0;
+}
+
+#header #menu li {
+  background-color: #305a37;
+  display: inline-block;
+  padding: 0 4px;
+  border-color: #436b46;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+#header #login {
+  float: right;
+  margin: 0 8px 0 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#header h1 {
+  padding: 0;
+  font-size: 48px;
+  margin: 16px 0;
+}
+
+#header p {
+  margin: 0;
+}
+
+#main {
+  background-color: #bbd5b2;
+  padding: 8px 12px;
+  overflow: hidden;
+  clear: both;
+}
+#main h1 {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+div.login_form {
+  width: 260px;
+}
+
+div.login_form div {
+  text-align: right;
+}
+
+
+div.login_form div.submit_button {
+  text-align: left;
+}
+
+#footer {
+  height: 20px;
+  margin: 0;
+  padding: 4px 6px 4px 10px;
+  bottom: 0;
+  color: #c7e3c3;
+}
+
+#footer p {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  color: #bbd5b2;
+}
+
+#footer span.current {
+  text-decoration: underline;
+}

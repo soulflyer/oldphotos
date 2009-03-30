@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20090326183042) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "per_page"
+    t.string   "stylesheets"
   end
 
 end

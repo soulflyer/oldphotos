@@ -3,6 +3,11 @@
 
 <b>Pics per page:</b>
 <p><%=h @user.per_page %></p>
+<div>
+	<h4>Stylesheets</h4>
+	<%= @user.stylesheets %>
+</div>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -5,9 +5,9 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Soulflyer Photos: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'photos' %>
-  <% if @stylesheet %>
-    <%= stylesheet_link_tag @stylesheet %>
+  <%= stylesheet_link_tag stylesheets + '/photos' %>
+  <% for sh in @stylesheet %>
+    <%= stylesheet_link_tag stylesheets + "/" + sh %>
   <% end %>
 </head>
 <body>

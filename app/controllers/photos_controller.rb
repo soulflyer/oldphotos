@@ -3,13 +3,8 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.xml
   def index
-    if session[:user_id]
-      per_page=User.find(session[:user_id]).per_page
-    else
-      per_page=12
-    end
     # @photos = Photo.find(:all)
-    @photos = Photo.paginate :page => params[:page], :per_page => per_page
+    @photos = Photo.paginate :page => params[:page], :per_page => per_page, :order => 'updated_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -123,6 +118,15 @@ class PhotosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(photos_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  private
+  def per_page
+    if session[:user_id]
+      User.find(session[:user_id]).per_page
+    else
+      12
     end
   end
 end

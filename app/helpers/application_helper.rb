@@ -4,4 +4,12 @@ module ApplicationHelper
   def photo_root_directory
     "photos"
   end
+  
+  def stylesheets
+    if session[:user_id]
+      User.find(session[:user_id]).stylesheets
+    else
+      "default"
+    end
+  end
 end

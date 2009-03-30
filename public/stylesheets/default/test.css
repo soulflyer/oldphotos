@@ -1,0 +1,51 @@
+/* @override http://localhost:3000/stylesheets/test.css */
+
+#black1 {
+	height: 200px; 
+	width: 100px; 
+	border: 1px solid black; 
+	float: left; 
+  background-color: #c7c7c7;
+}
+#black2 {
+	height: 200px; 
+	width: 200px; 
+	border: 1px solid black;
+	float: left; 
+  background-color: #a3a3a3;
+}
+#blue1  {
+	height:   80px; 
+	width: 180px; 
+	border: 1px solid blue; 
+	float: left; 
+  background-color: #5283ea;
+}
+#yellow {
+	height:  80px; 
+	width: 80px; 
+	border: 10px solid yellow; 
+	float: left; 
+  background-color: #dee44b;
+}
+#green1 {
+	height:   60px; 
+	width: 20px; 
+	border: 1px solid green; 
+	float: left; 
+  background-color: #6dff81;
+}
+#green2 {
+	height:   60px; 
+	width: 20px; 
+	border: 1px solid green; 
+	float: left; 
+  background-color: #37c769;
+}
+#blue2  {
+	height:    80px; 
+	width: 80px; border: 
+	1px solid blue; 
+	float: left; 
+  background-color: #b0c4ff;
+}

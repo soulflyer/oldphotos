@@ -1,0 +1,97 @@
+/* @override http://localhost:3000/stylesheets/index.css?1238048064 */
+
+#main {
+  padding: 0 10px;
+}
+
+div.row {
+  background-color: #b4cdb0;
+  width: 280px;
+  float: left;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 6px 10px;
+}
+
+div.pic {
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 186px;
+  height: 126px;
+  overflow: hidden;
+}
+
+div.pic a {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+div.pic img{
+  float: right;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #101d12;
+}
+
+div.description {
+  height: 124px;
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 94px;
+}
+
+div.description ul {
+  margin: 0;
+  padding: 0;
+  clear: both;
+}
+
+div.links {
+  padding: 4px 0 0;
+  margin: 0;
+  float: left;
+  width: 270px;
+  background-color: #2d6a39;
+}
+
+div.links p {
+  margin: 0;
+  padding: 0;
+}
+
+div.links ul{
+  padding: 0;
+  margin: 0;
+}
+
+div.links li {
+  background-color: #305a37;
+  display: inline-block;
+  border-color: #436b46;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  font-size: small;
+  padding: 0 3px;
+}
+
+div.links a { 
+  color: #bbd5b2;
+  padding: 0;
+  margin: 0;
+}
+
+div.links a:visited { 
+}
+
+div.links a:hover { 
+  color: #9cffa0;
+}
+
+div.pagination {
+  float: left;
+}
